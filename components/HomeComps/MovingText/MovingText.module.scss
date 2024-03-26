@@ -1,0 +1,39 @@
+.movingText {
+  width: 100%;
+  // overflow: hidden;
+  background-color: var(--white);
+  transform: rotate(-3deg) scale(1.05);
+  margin-bottom: 5em;
+
+  .movingTextContainer {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    animation: moveRight 10s linear infinite forwards; /* Adjust duration as needed */
+  }
+
+  @keyframes moveRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .movingTextItem {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--black);
+    font-size: 2.3rem;
+    //   display: inline-block;
+    //   padding-right: 20px; /* Adjust spacing between texts */
+  }
+
+  @media screen and (max-width: 900px) {
+    h2 {
+      font-size: 1.2rem !important;
+    }
+  }
+}

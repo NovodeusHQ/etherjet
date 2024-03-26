@@ -1,0 +1,103 @@
+.blogCard {
+  width: 100%;
+  margin: 0.6em 0;
+  background: var(--white);
+  // padding: 0.1em;
+  border-radius: 10px;
+  min-height: 100px;
+  background: url('../../public/assets/blogCardBg.png') top center no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+
+  h5 {
+    font-size: 1.1rem;
+    color: var(--mainGrey);
+  }
+
+  .blogDeets {
+    h6 {
+      font-size: 0.8rem;
+      color: var(--grey1);
+    }
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 1px !important;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.authorCard {
+  width: 100%;
+  margin: 0.6em 0;
+  background: var(--white);
+  // padding: 0.1em;
+  border-radius: 10px;
+  min-height: 100px;
+  background: url('../../public/assets/authorBg.png') top center no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.licenseCard article {
+  background: url('../../public/assets/LicenseCardBg.png') top center no-repeat;
+  background-size: 100% 100%;
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blogCard {
+    margin: 0;
+    width: 32%;
+    min-height: 50px;
+    // h5 {
+    //   font-size: 1.5rem;
+    //   margin-bottom: 1em;
+    // }
+
+    // h6 {
+    //   font-size: 1.1rem;
+    //   color: var(--Grey2);
+    // }
+
+    // p {
+    //   font-size: 1rem;
+    // }
+  }
+
+  .licenseCard article {
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .blogCard {
+    margin: 0;
+    width: 30%;
+    min-height: 50px;
+
+    // h6 {
+    //   font-size: 1.1rem;
+    //   color: var(--Grey2);
+    // }
+
+    // p {
+    //   font-size: 1rem;
+    // }
+  }
+}

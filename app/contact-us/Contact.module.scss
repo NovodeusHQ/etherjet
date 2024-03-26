@@ -1,0 +1,159 @@
+.contact {
+  position: relative;
+  padding: 50px 0;
+
+  background: url('../../public/assets/servicesBg.png') no-repeat;
+  background-position: center 60%;
+  background-size: contain;
+
+  &::before,
+  &::after,
+  > main {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fade-in 3s linear infinite forwards;
+    z-index: -1;
+  }
+
+  &::before {
+    background-image: url('../../public/assets/Spiral3.png');
+    animation-delay: 0s;
+  }
+
+  &::after {
+    background-image: url('../../public/assets/Spiral.png');
+    animation-delay: 1s;
+  }
+
+  > main {
+    background-image: url('../../public/assets/Spiral3.png');
+    animation-delay: 2s;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translate(0) rotate(0deg);
+    }
+    50% {
+      transform: translate(0) rotate(3deg);
+    }
+    100% {
+      transform: translate(30px) rotate(0deg);
+
+      opacity: 0.25;
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--grey1);
+      font-family: var(--font-jakarta), sans-serif;
+    }
+  }
+
+  .contactForm {
+    input,
+    textarea {
+      background: transparent;
+      border: solid 1.5px var(--white);
+      border-radius: 9px;
+      padding: 0.6em 1em;
+    }
+  }
+
+  .budgetBtn {
+    position: relative;
+    padding: 0.6em 1.3em;
+    border: 5px solid transparent;
+    color: var(--white);
+    background: #000000df;
+    background-clip: padding-box;
+    border-radius: 1.8em;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -2px;
+
+      border-radius: inherit;
+
+      background: radial-gradient(
+          69.43% 69.43% at 50% 50%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        radial-gradient(
+          60% 51.57% at 50% 50%,
+          #e733e0 0%,
+          rgba(231, 51, 224, 0) 100%
+        ),
+        radial-gradient(
+          54.8% 53% at 50% 50%,
+          #5336e2 0%,
+          rgba(83, 54, 226, 0) 100%
+        );
+    }
+    &:hover {
+      position: relative;
+      background-color: transparent;
+      padding: 0.6em 1.3em;
+      overflow: hidden;
+      border-radius: 1.8em;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        background: var(--radial);
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        /* transition: width 0.5s ease, height 0.5s ease; */
+        z-index: -1;
+      }
+
+      &:hover::before {
+        /* border-radius: 0; */
+        position: absolute;
+        bottom: -50%;
+        left: -20%;
+        width: 200%;
+        height: 200%;
+      }
+    }
+  }
+
+  .activeBudgetBtn {
+    padding: 0.6em 1.5em;
+    background: var(--radial);
+    border-radius: 1.8em;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  // .reviewWrappr {
+  //   background: url('../../public/assets/servicesBg.png') top top no-repeat;
+  //   background-size: cover;
+  // }
+}

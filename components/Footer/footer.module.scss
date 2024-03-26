@@ -1,0 +1,12 @@
+.footer {
+  background: #131214;
+  padding: 4em 0;
+  position: relative;
+  overflow: hidden;
+
+  ul li a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--font-orbitron), sans-serif;
+  }
+}
