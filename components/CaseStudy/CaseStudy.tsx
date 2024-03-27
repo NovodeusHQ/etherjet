@@ -41,6 +41,24 @@ const CaseStudy = ({ title }: { title: string }) => {
       url: '/case-study/vortex',
       imageUrl: images.caseStudy6,
     },
+    {
+      id: 7,
+      title: 'Byte',
+      url: '/case-study/byte',
+      imageUrl: images.caseStudy7,
+    },
+    {
+      id: 8,
+      title: 'Mendoza',
+      url: '#case-study',
+      imageUrl: images.caseStudy8,
+    },
+    {
+      id: 9,
+      title: 'Mantis',
+      url: '#case-study',
+      imageUrl: images.caseStudy9,
+    }
   ];
 
   return (

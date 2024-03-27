@@ -50,7 +50,7 @@ const CaseStudyCard = ({ data }: ICaseStudyCardProps) => {
               <Link href={url} className=''>
                 <h5 className='mb-3'> {title} </h5>
                 <figure className='mt-4'>
-                  <Image src={imageUrl} alt={title} />
+                  <Image src={imageUrl} alt={title} className='img-fluid' />
                 </figure>
               </Link>
             </SwiperSlide>
