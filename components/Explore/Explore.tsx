@@ -1,15 +1,16 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { FormEvent } from 'react';
 import KOLAnimation from '../SVGs/KOLAnimation';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Explore = () => {
 
-  const submitHandler = async (e: any) => {
+  const submitHandler = async (e: FormEvent) => {
     e.preventDefault();
     // setLoading(true);
 
+    console.log(e.target);
     // const addresses = emails.split(',');
     // for (const address of addresses) {
     //     if (!isValidEmail(address)) {
@@ -123,6 +124,7 @@ const Explore = () => {
               className='w-full pb-3 '
             />
           </div>
+          <button type='submit'>Submit</button>
         </form>
       </article>
     </section>
