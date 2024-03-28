@@ -619,3 +619,27 @@ input:checked[type="checkbox" i] {
   );
   pointer-events: none; /* Allow clicks to pass through */
 }
+
+.show-border {
+  border: solid 1px red;
+}
+
+.case-study-container {
+  position: relative;
+}
+
+.coming-soon-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #9747FF;
+  width: 221px;
+  height: 48px;
+  border-radius: 25px;
+  border: 2px solid white;
+}
+
+.coming-soon-btn:hover {
+  border: 3px solid white;
+}

@@ -30,14 +30,14 @@ const HeroSection = () => {
         data-aos-duration='1500'
         className='w-full md:w-6/12 '
       >
-        {/* <Image src={images.heroImage} alt='EtherEdge Hero gif' /> */}
-        {/* <video src="@/public/assets/heroImage.mp4" controls autoplay loop /> */}
-        <div className="video-background">
+        <Image src={images.heroImage} alt='EtherEdge Hero gif' />
+
+        {/* <div className="video-background">
           <video autoPlay muted loop>
             <source src="/assets/heroImage.mp4" type="video/mp4"></source>
           </video>
           <div className="gradient-mask"></div>
-        </div>
+        </div> */}
 
       </figure>
     </section>

@@ -4,6 +4,7 @@ import HeroSection from '@/components/HomeComps/HeroSection/HeroSection';
 import Unravel from '@/components/HomeComps/Unravel/Unravel';
 import { WhatWeOffer } from '@/components/HomeComps/WhatWeOffer/WhatWeOffer';
 import WhatPeople from '@/components/Reviews/WhatPeople';
+import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CaseStudy title='Case Studies' />
       <WhatPeople />
       <Explore />
+      <ToastContainer />
     </main>
   );
 }

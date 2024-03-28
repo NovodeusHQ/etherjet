@@ -1,8 +1,57 @@
 import Image from 'next/image';
 import React from 'react';
 import KOLAnimation from '../SVGs/KOLAnimation';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Explore = () => {
+
+  const submitHandler = async (e: any) => {
+    e.preventDefault();
+    // setLoading(true);
+
+    // const addresses = emails.split(',');
+    // for (const address of addresses) {
+    //     if (!isValidEmail(address)) {
+    //         alert.error(`The address "${address}" in the "To" field was not recognized. Please make sure that all addresses are properly formed`);
+
+    //         return;
+    //     }
+    // }
+
+    // const mail = {
+    //     email: 'polalekan@gmail.com',
+    //     subject,
+    //     message
+    // }
+
+    const config = {
+        headers: {
+            'content-type': 'application/json',
+            'MAIL_ACCESS_KEY': '534959b1edcec68869bd353dd1cdb20203a'
+        }
+    }
+
+    try {
+        // const {data} = await axios.post('http://127.0.0.1:4000', mail, config);
+        const testApi = 'https://coachmie-email-server.onrender.com';
+        // const prodApi = 'https://coachmielearnerapi.herokuapp.com/api/v1/user/sendMail';
+        // const { data } = await axios.post(testApi, mail, config);
+
+        // if (data.status === "success") {
+        //     toast.success(data.message);
+        // } else {
+        //     // console.log(data.error);
+        //     toast.error("Mail sending failed")
+        // }
+    } catch (error: any) {
+        toast.error(error.message)
+        // console.log(error)
+    }
+    // setLoading(false);
+}
+
+
   return (
     <section className='explore flex flex-col md:flex-row justify-between container my-[100px] '>
       <div

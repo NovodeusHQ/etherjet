@@ -25,8 +25,8 @@ const CaseStudyCard = ({ data }: ICaseStudyCardProps) => {
         // }}
         loop={true}
         navigation={{
-          nextEl: '.caseBtnNext',
-          prevEl: '.caseBtnPrev',
+          nextEl: '.caseBtnPrev',
+          prevEl: '.caseBtnNext',
           disabledClass: 'swiper-button-disabled',
         }}
         scrollbar={{ el: '.swiper-scrollbar' }}
@@ -45,12 +45,13 @@ const CaseStudyCard = ({ data }: ICaseStudyCardProps) => {
         className='mySwiper'
       >
         <section className=''>
-          {data.map(({ id, title, url, imageUrl }) => (
+          {data.map(({ id, title, url, imageUrl, comingSoon }) => (
             <SwiperSlide key={id}>
-              <Link href={url} className=''>
+              <Link href={url}>
                 <h5 className='mb-3'> {title} </h5>
                 <figure className='mt-4'>
                   <Image src={imageUrl} alt={title} className='img-fluid' />
+                  {comingSoon && <button className='btn coming-soon-btn'>Coming Soon</button>}
                 </figure>
               </Link>
             </SwiperSlide>

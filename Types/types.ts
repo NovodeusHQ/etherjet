@@ -5,6 +5,7 @@ export interface ICaseStudy {
   title: string;
   imageUrl: string | StaticImageData;
   url: string;
+  comingSoon?: boolean;
 }
 
 export interface IReview {
