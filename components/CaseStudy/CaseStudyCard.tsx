@@ -51,7 +51,9 @@ const CaseStudyCard = ({ data }: ICaseStudyCardProps) => {
                 <h5 className='mb-3'> {title} </h5>
                 <figure className='mt-4'>
                   <Image src={imageUrl} alt={title} className='img-fluid' />
-                  {comingSoon && <button className='btn coming-soon-btn'>Coming Soon</button>}
+                  {comingSoon && <button className='btn coming-soon-btn' disabled>
+                    Coming Soon
+                    </button>}
                 </figure>
               </Link>
             </SwiperSlide>
