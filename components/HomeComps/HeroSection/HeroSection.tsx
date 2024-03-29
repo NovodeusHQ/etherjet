@@ -30,7 +30,13 @@ const HeroSection = () => {
         data-aos-duration='1500'
         className='w-full md:w-6/12 '
       >
-        <Image src={images.heroImage} alt='EtherEdge Hero gif' />
+        <Image
+          src={images.heroImage}
+          alt='EtherEdge Hero gif'
+          unoptimized={true}
+          loading="eager"
+          layout="fixed"
+        />
 
         {/* <div className="video-background">
           <video autoPlay muted loop>
