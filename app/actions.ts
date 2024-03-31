@@ -1,6 +1,6 @@
 'use server'
 
-import sendEmailService from "@/services/sendEmailService";
+import sendEmailService from "@/services/sendEmailService.js";
 
 export async function sendProposalEmail(formData: FormData) {
 
