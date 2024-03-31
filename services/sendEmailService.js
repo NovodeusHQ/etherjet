@@ -203,7 +203,7 @@ const sendEmailService = async (formData, formType) => {
       </div>
 `
 
-    // console.log("in sendEmailService");
+    console.log("in sendEmailService");
 
     const transporter = nodemailer.createTransport({
         host: 'smtp-mail.outlook.com',
@@ -226,7 +226,7 @@ const sendEmailService = async (formData, formType) => {
     }
 
     await transporter.sendMail(message);
-    // console.log("After transporter sendMail");
+    console.log("After transporter sendMail");
 }
 
 export default sendEmailService;
