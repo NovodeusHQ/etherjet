@@ -22,6 +22,7 @@ const NavBar = () => {
   };
 
   const linkList = [
+    { id: 0, title: 'Home', url: '/' },
     { id: 1, title: 'Work', url: '/#case-study' },
     // { id: 2, title: 'Team', url: '/team' },
     {
