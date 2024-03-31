@@ -54,13 +54,20 @@ const CaseStudy = ({ title }: { title: string }) => {
       imageUrl: images.caseStudy8,
       comingSoon: true
     },
-    {
-      id: 9,
-      title: 'Mantis',
+    // {
+    //   id: 9,
+    //   title: 'Mantis',
+    //   url: '#case-study',
+    //   imageUrl: images.caseStudy9,
+    //   comingSoon: true
+    // }
+     {
+      id: 10,
+      title: 'Coming Soon',
       url: '#case-study',
-      imageUrl: images.caseStudy9,
+      imageUrl: images.caseStudy10,
       comingSoon: true
-    }
+    },
   ];
 
   return (
