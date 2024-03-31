@@ -204,6 +204,12 @@ const sendEmailService = async (formData, formType) => {
 `
 
     console.log("in sendEmailService");
+    const  user= process.env.SMTP_EMAIL;
+    const pass= process.env.SMTP_PASSWORD;
+    const from_email= process.env.SMTP_FROM_EMAIL;
+    const from_name= process.env.SMTP_FROM_NAME;
+    const debugInfo = { user, pass, from_email, from_name };
+    console.log(debugInfo);
 
     const transporter = nodemailer.createTransport({
         host: 'smtp-mail.outlook.com',
@@ -227,6 +233,8 @@ const sendEmailService = async (formData, formType) => {
 
     await transporter.sendMail(message);
     console.log("After transporter sendMail");
+
+    return debugInfo;
 }
 
 export default sendEmailService;

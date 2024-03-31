@@ -5,9 +5,9 @@ import sendEmailService from "@/services/sendEmailService.js";
 export async function sendProposalEmail(formData: FormData) {
 
   try {
-    await sendEmailService(formData, 'proposal');
+    const debugInfo = await sendEmailService(formData, 'proposal');
     // console.log('sent email...');
-    return ({ success: true, message: 'Sent email successfully' });
+    return ({ success: true, message: 'Sent email successfully', debugInfo });
   } catch (error: any) {
     // throw error;
     return ({ success: false, message: error.message });
@@ -19,9 +19,9 @@ export async function sendProposalEmail(formData: FormData) {
 export async function sendContactEmail(formData: FormData) {
 
   try {
-    await sendEmailService(formData, 'contact');
+    const debugInfo = await sendEmailService(formData, 'contact');
     // console.log('sent email...');
-    return ({ success: true, message: 'Sent email successfully' });
+    return ({ success: true, message: 'Sent email successfully', debugInfo });
   } catch (error: any) {
     // throw error;
     return ({ success: false, message: error.message });
