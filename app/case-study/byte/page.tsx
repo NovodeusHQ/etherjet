@@ -14,7 +14,7 @@ export default function page() {
         >
           <article data-aos='fade-left' className='w-full md:w-7/12'>
             <hgroup className='flex'>
-              <h2 className='gradient-text'> HeculeX</h2>
+              <h2 className='gradient-text'>Byte</h2>
             </hgroup>
 
             <h4>Client: Web3 Innovations Ltd.</h4>
@@ -36,7 +36,7 @@ export default function page() {
             data-aos-delay='300'
             className='w-full md:w-4/12'
           >
-            <Image src={images.elephantCard} alt='' />
+            <Image src={images.caseStudy7} alt='' />
           </figure>
         </section>
 
