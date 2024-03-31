@@ -2,6 +2,7 @@ import { images } from '@/exports/images';
 // import { videos } from '@/exports/videos';
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,11 @@ const HeroSection = () => {
         </p>
 
         <div className='mt-8'>
-          <button className='main-btn' type='button'>
-            GET YOUR PROPOSAL{' '}
-          </button>
+          <Link href='#explore'>
+            <button className='main-btn btn' type='button'>
+              GET YOUR PROPOSAL{' '}
+            </button>
+          </Link>
         </div>
       </article>
       <figure

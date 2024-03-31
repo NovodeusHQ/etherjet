@@ -17,3 +17,10 @@ export interface IReview {
   role: string;
   stars: boolean;
 }
+
+export interface ICheckboxes {
+  id: string,
+  name: string,
+  checked: boolean,
+  label: string,
+}

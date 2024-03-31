@@ -1,54 +1,110 @@
 'use client';
-import React, { useRef, useState } from 'react';
+
+import React, { useEffect, useRef, useState } from 'react';
 import CustomCheckbox from './CustomeCheckBox/CustomeCheckBox';
+import { useFormStatus } from 'react-dom';
+import { sendContactEmail } from '@/app/actions';
+import { toast } from 'react-toastify';
 
-const checkboxes = [
-  {
-    id: 'KOL',
-    name: 'KOL',
-    checked: true,
-    label: 'KOL Recruitment and Management',
-  },
-  {
-    id: 'communityManagement',
-    name: 'communityManagement',
-    checked: false,
-    label: 'Community Management',
-  },
-  { id: 'advisory', name: 'advisory', checked: false, label: 'Advisory' },
-  {
-    id: 'marketMaking',
-    name: 'marketMaking',
-    checked: false,
-    label: 'Market Making',
-  },
-  {
-    id: 'graphicsDesign',
-    name: 'graphicsDesign',
-    checked: false,
-    label: 'Graphics Design',
-  },
-];
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
 
-const projectBudget = [
-  {
-    id: 'projectBudget',
-    value: '$1-$5000',
-  },
-  {
-    id: 'projectBudget',
-    value: '$5,000 - $20,000',
-  },
-  {
-    id: 'projectBudget',
-    value: '$20,000-$50,000',
-  },
-  {
-    id: 'projectBudget',
-    value: '$50,000+',
-  },
-];
+  // useEffect(() => {
+  //   console.log({ pending });
+  // }, [pending]);
+
+  return (<button className='main-btn'
+    aria-disabled={pending}
+    disabled={pending}
+  >Submit</button>)
+}
+
 const ContactForm = ({ styles }: { styles: any }) => {
+
+  const submitHandler = async (formData: FormData) => {
+
+    const budgetIdx = Number(Object.keys(selectBudget)[0])
+    const budget = projectBudget[budgetIdx].value;
+
+    let services = "";
+
+    for (const service of selectServices) {
+      if (service.checked) {
+        services += services === "" ? "" : ", ";
+        services += service.label
+      }
+    }
+
+    // console.log({ budget, services })
+
+    formData.append('budget', budget);
+    formData.append('services', services);
+
+    const response = await sendContactEmail(formData);
+
+    console.log(response);
+
+    if (response.success) {
+      toast.success("Thank you for reaching out to EtherEdge! Your message has been received.\nWe will get back to you shortly.");
+    }
+    else {
+      toast.error("Failed to submit\nPlease try again");
+    }
+  }
+
+  const projectBudget = [
+    {
+      id: 'projectBudget',
+      value: '$1-$5000',
+    },
+    {
+      id: 'projectBudget',
+      value: '$5,000 - $20,000',
+    },
+    {
+      id: 'projectBudget',
+      value: '$20,000-$50,000',
+    },
+    {
+      id: 'projectBudget',
+      value: '$50,000+',
+    },
+  ];
+
+  const [selectServices, setSelectServices] = useState([
+    {
+      id: 'KOL',
+      name: 'KOL',
+      checked: true,
+      label: 'KOL Recruitment and Management',
+    },
+    {
+      id: 'communityManagement',
+      name: 'communityManagement',
+      checked: false,
+      label: 'Community Management',
+    },
+    { id: 'advisory', name: 'advisory', checked: false, label: 'Advisory' },
+    {
+      id: 'marketMaking',
+      name: 'marketMaking',
+      checked: false,
+      label: 'Market Making',
+    },
+    {
+      id: 'graphicsDesign',
+      name: 'graphicsDesign',
+      checked: false,
+      label: 'Graphics Design',
+    },
+    {
+      id: 'allInclusive',
+      name: 'allInclusive',
+      checked: false,
+      label: 'All Inclusive',
+    }
+  ]);
+
   const [selectBudget, setSelectBudget] = useState<{ [key: number]: boolean }>(
     {},
   );
@@ -56,13 +112,43 @@ const ContactForm = ({ styles }: { styles: any }) => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSelectBudget = (id: number) => {
-    setSelectBudget((prev) => ({ prev, [id]: !prev[id] }));
+    setSelectBudget((prev) => ({ [id]: !prev[id] }));
   };
+
+  const handleCheckboxChange = (changedId: string) => {
+    const updatedCheckboxes = selectServices.map((checkbox) => {
+      if (checkbox.id === changedId) {
+        return {
+          ...checkbox,
+          checked: !checkbox.checked,
+        };
+      } else if (checkbox.id === 'allInclusive' && changedId !== 'allInclusive') {
+        return {
+          ...checkbox,
+          checked: false,
+        };
+      } else if (checkbox.id !== 'allInclusive' && changedId === 'allInclusive') {
+        return {
+          ...checkbox,
+          checked: true,
+        };
+      } else {
+        return checkbox;
+      }
+    });
+
+    setSelectServices(updatedCheckboxes);
+  };
+
+  // useEffect(() => {
+  //   console.log({ checkboxes: selectServices });
+  //   console.log({ selectBudget });
+  // }, [selectServices, selectBudget]);
 
   return (
     <form
       className={`${styles.contactForm} flex flex-col md:flex-row gap-3 justify-between `}
-      ref={formRef}
+      ref={formRef} action={submitHandler}
     >
       <article className='w-full md:w-[55%] '>
         <div>
@@ -70,12 +156,14 @@ const ContactForm = ({ styles }: { styles: any }) => {
             Select Service <span>(You can choose more than one)</span>{' '}
           </h3>
           <div className='flex flex-wrap gap-6 mt-6'>
-            {checkboxes.map(({ id, name, label }) => (
+            {selectServices.map(({ id, name, checked, label }) => (
               <div
                 key={id}
                 className='flex items-center gap-3 w-full md:w-[45%]'
               >
-                <input id={id} name={name} type='checkbox' />{' '}
+                <input id={id} name={name} type='checkbox' checked={checked}
+                  onChange={(e) => handleCheckboxChange(e.target.id)}
+                />{' '}
                 <label> {label} </label>
               </div>
             ))}
@@ -89,9 +177,8 @@ const ContactForm = ({ styles }: { styles: any }) => {
             {projectBudget.map(({ id, value }, idx) => (
               <div
                 key={idx}
-                className={`${
-                  selectBudget[idx] ? styles.activeBudgetBtn : styles.budgetBtn
-                }`}
+                className={`${selectBudget[idx] ? styles.activeBudgetBtn : styles.budgetBtn
+                  }`}
                 onClick={() => handleSelectBudget(idx)}
               >
                 <label id={id}> {value} </label>
@@ -120,7 +207,7 @@ const ContactForm = ({ styles }: { styles: any }) => {
         <div className='my-5'>
           <input
             id='Telegram/WhatsApp*'
-            name='Telegram/WhatsApp*'
+            name='telegram'
             type='text'
             placeholder='Telegram/WhatsApp*'
             className='w-full pb-3 '
@@ -146,7 +233,7 @@ const ContactForm = ({ styles }: { styles: any }) => {
         </div>
 
         <div className='my-5'>
-          <button className='main-btn'>Submit</button>
+          <SubmitButton />
         </div>
       </aside>
     </form>

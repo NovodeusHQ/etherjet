@@ -5,6 +5,7 @@ import Unravel from '@/components/HomeComps/Unravel/Unravel';
 import { WhatWeOffer } from '@/components/HomeComps/WhatWeOffer/WhatWeOffer';
 import WhatPeople from '@/components/Reviews/WhatPeople';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (

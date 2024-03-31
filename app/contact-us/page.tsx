@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Contact.module.scss';
 import ContactForm from '@/components/ContactComps/ContactForm';
 import Reviews from '@/components/Reviews/Reviews';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export default function page() {
   return (
@@ -17,6 +19,7 @@ export default function page() {
           <Reviews />
         </section>
       </section>
+      <ToastContainer />
     </main>
   );
 }
