@@ -1,6 +1,6 @@
 'use server'
 
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 const getDateTime = () => {
     const date = new Date();
@@ -25,7 +25,7 @@ const getDateTime = () => {
     return currentDateTime
 }
 
-const sendEmailService = async (formData: FormData, formType: string) => {
+const sendEmailService = async (formData, formType) => {
 
     const name = formData.get('name');
     const email = formData.get('email');
@@ -206,7 +206,7 @@ const sendEmailService = async (formData: FormData, formType: string) => {
     // console.log("in sendEmailService");
 
     const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
+        host: 'smtp-mail.outlook.com',
         port: process.env.SMTP_PORT,
         auth: {
           user: process.env.SMTP_EMAIL,
