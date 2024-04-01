@@ -203,7 +203,7 @@ const sendEmailService = async (formData, formType) => {
       </div>
 `
 
-    console.log("in sendEmailService");
+    // console.log("in sendEmailService");
     const  user= process.env.SMTP_EMAIL;
     const pass= process.env.SMTP_PASSWORD;
     const from_email= process.env.SMTP_FROM_EMAIL;
@@ -222,17 +222,18 @@ const sendEmailService = async (formData, formType) => {
 
     const message = {
         from: `${process.env.SMTP_FROM_NAME} <${process.env.SMTP_FROM_EMAIL}>`,
-        // to: [
-        //     'Michaelvisn@gmail.com',
-        //     'Digibuzzng@gmail.com',
-        // ],
-        to: ['polalekan@gmail.com', 'one.pelumi.guy@gmail.com'],
+        to: [
+            'Michaelvisn@gmail.com',
+            'Digibuzzng@gmail.com',
+            'one.pelumi.guy@gmail.com'
+        ],
+        // to: ['polalekan@gmail.com', 'one.pelumi.guy@gmail.com'],
         subject: `New Entry - ${formType === 'contact' ? 'Contact' : 'Proposal'} Form`,
         html: emailTemplate
     }
 
     await transporter.sendMail(message);
-    console.log("After transporter sendMail");
+    // console.log("After transporter sendMail");
 
     return debugInfo;
 }

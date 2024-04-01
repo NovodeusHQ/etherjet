@@ -42,13 +42,13 @@ const ContactForm = ({ styles }: { styles: any }) => {
 
     const response = await sendContactEmail(formData);
 
-    console.log(response);
+    // console.log(response);
 
     if (response.success) {
-      toast.success("Thank you for reaching out to EtherEdge! Your message has been received.\nWe will get back to you shortly.");
+      toast.success("Thank you for reaching out to EtherEdge! Your message has been received.<br />We will get back to you shortly.");
     }
     else {
-      toast.error("Failed to submit\nPlease try again");
+      toast.error("Failed to submit<br />Please try again");
     }
   }
 

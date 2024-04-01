@@ -23,10 +23,10 @@ const Explore = () => {
   const submitHandler = async (formData: FormData) => {
     const response = await sendProposalEmail(formData);
 
-    console.log({response});
+    // console.log({response});
 
     if (response.success) toast.success("Proposal submitted successfully!");
-    else toast.error("Failed to submit proposal\nPlease try again");
+    else toast.error("Failed to submit proposal<br />Please try again");
   }
 
   return (
