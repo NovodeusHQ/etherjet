@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import React, { FormEvent } from 'react';
 import KOLAnimation from '../SVGs/KOLAnimation';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import { sendProposalEmail } from '@/app/actions';
 import { useFormStatus } from 'react-dom';
@@ -25,8 +24,14 @@ const Explore = () => {
 
     // console.log({response});
 
-    if (response.success) toast.success("Proposal submitted successfully!");
-    else toast.error("Failed to submit proposal<br />Please try again");
+
+    if (response.success) {
+      toast.success("Proposal submitted successfully!");
+    }
+    else {
+      // @ts-ignore
+      toast.error("Failed to submit proposal<br />Please try again", { enableHtml: true});
+    }
   }
 
   return (

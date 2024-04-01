@@ -44,11 +44,14 @@ const ContactForm = ({ styles }: { styles: any }) => {
 
     // console.log(response);
 
+
     if (response.success) {
-      toast.success("Thank you for reaching out to EtherEdge! Your message has been received.<br />We will get back to you shortly.");
+      // @ts-ignore
+      toast.success("Thank you for reaching out to EtherEdge! Your message has been received.<br />We will get back to you shortly.", { enableHtml: true });
     }
     else {
-      toast.error("Failed to submit<br />Please try again");
+      // @ts-ignore
+      toast.error("Failed to submit<br />Please try again", { enableHtml: true });
     }
   }
 
