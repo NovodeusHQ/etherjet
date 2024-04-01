@@ -38,7 +38,7 @@ const HeroSection = () => {
           alt='EtherEdge Hero gif'
           unoptimized={true}
           loading="eager"
-          layout="fixed"
+          // layout="fixed"
         />
 
         {/* <div className="video-background">

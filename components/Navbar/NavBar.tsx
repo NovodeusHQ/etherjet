@@ -52,7 +52,7 @@ const NavBar = () => {
           </section>
           {/* Logo */}
           <section
-            className={`flex flex-row  items-center`}
+            className={`flex flex-row items-center`}
             data-aos='zoom-out'
             data-aos-duration='1500'
           >

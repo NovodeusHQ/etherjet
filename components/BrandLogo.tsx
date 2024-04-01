@@ -6,7 +6,11 @@ import Logo from '@/public/assets/EtherLogo.png';
 const BrandLogo = () => {
   return (
     <Link href='/'>
-      <Image src={Logo} alt='Etherjet logo' />
+      <Image src={Logo}
+      alt='Etherjet logo'
+      unoptimized={true}
+      loading="eager"
+      />
       {/* <IlemiLogo /> */}
     </Link>
   );
