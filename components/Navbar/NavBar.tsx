@@ -56,7 +56,9 @@ const NavBar = () => {
             data-aos='zoom-out'
             data-aos-duration='1500'
           >
-            <div>
+            <div
+            style={{width: "160.5px", height: "26.5px" }}
+            >
               <BrandLogo />
             </div>
           </section>
