@@ -8,7 +8,7 @@ const BrandLogo = () => {
     <Link href='/'>
       <Image src={Logo}
       alt='Etherjet logo'
-      unoptimized={true}
+      unoptimized={false}
       loading="eager"
       />
       {/* <IlemiLogo /> */}
