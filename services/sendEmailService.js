@@ -225,9 +225,8 @@ const sendEmailService = async (formData, formType) => {
         to: [
             'Michaelvisn@gmail.com',
             'Digibuzzng@gmail.com',
-            'one.pelumi.guy@gmail.com'
+            // 'one.pelumi.guy@gmail.com'
         ],
-        // to: ['polalekan@gmail.com', 'one.pelumi.guy@gmail.com'],
         subject: `New Entry - ${formType === 'contact' ? 'Contact' : 'Proposal'} Form`,
         html: emailTemplate
     }
