@@ -44,7 +44,7 @@ const CaseStudy = ({ title }: { title: string }) => {
     {
       id: 7,
       title: 'Byte',
-      url: '/case-study/byte',
+      url: '/case-study/byte-on-blast',
       imageUrl: images.caseStudy7,
     },
     {
