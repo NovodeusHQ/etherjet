@@ -61,24 +61,35 @@ export default function page() {
         >
           <hgroup className='flex flex-col  '>
             <h5 className='gradient-text'>EtherEdge&apos;s Approach</h5>
-            <h4 className='my-5'>Community Managers Expertise</h4>
+
+            {/* <h4 className='my-5'>Community Managers Expertise</h4> */}
           </hgroup>
 
-          <p className='my-5'>
-            Our approach revolved around a strategic blend of word-of-mouth
-            marketing through incentivized campaigns, leveraging
-            EtherEdge&apos;s extensive partnership network to amplify our quest
-            campaigns and reach an audience of 1 million without incurring
-            additional costs. Simultaneously, we established a mechanism for
-            capturing wallet addresses, enabling us to effectively track
-            community members&apos; purchasing power and contributions to the
-            ecosystem. Moreover, our strategic collaboration with Twitter
-            allowed us to secure approval for crypto ads, facilitating increased
-            traffic and visibility for Saruya within the crypto and gaming
-            communities. This holistic strategy aimed to attract, engage, and
-            monitor community growth, delivering measurable results aligned with
-            the challenge at hand.
+          <p className='my-3'>
+            ETHER EDGE MEDIA crafted and executed a comprehensive marketing and management plan to achieve BYTE ON BLAST&apos;s goals. <br /> This plan included:
           </p>
+
+          <h4 className='my-4'>KOL Management</h4>
+          <p className='my-3'>
+            Securing top-tier key opinion leaders (KOLs) to elevate BYTE ON BLAST&apos;s reputation and visibility in the market, particularly for pre-launch marketing campaigns.
+
+          </p>
+
+          <h4 className='my-4'>Graphics Design</h4>
+          <p className='my-3'>
+            Designing visually appealing and professional graphics to enhance the brand&apos;s online presence across various platforms.
+          </p>
+
+          <h4 className='my-4'>Community Management:</h4>
+          <p className='my-3'>
+            Establishing and nurturing an engaged and positive community through strategic interactions and consistent communication.
+          </p>
+
+          <h4 className='my-4'>Member Growth and Overall Management</h4>
+          <p className='my-3'>
+            Implementing targeted strategies to rapidly expand the Telegram community and other social channels, ensuring sustained engagement and active participation.
+          </p>
+
         </section>
 
         <section className={`${styles.countWrapper} `}>
