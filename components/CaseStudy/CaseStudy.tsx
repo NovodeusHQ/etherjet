@@ -49,7 +49,7 @@ const CaseStudy = ({ title }: { title: string }) => {
     },
     {
       id: 8,
-      title: 'Mendoza',
+      title: 'Coming Soon',
       url: '#case-study',
       imageUrl: images.caseStudy8,
       comingSoon: true
