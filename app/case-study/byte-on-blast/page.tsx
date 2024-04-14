@@ -94,7 +94,7 @@ export default function page() {
 
           {/* Stats & Results */}
 
-          <hgroup className={`${styles.stats} flex flex-col`}>
+          {/* <hgroup className={`${styles.stats} flex flex-col`}>
             <h5 className='gradient-text text-center'>Stats & Results</h5>
           </hgroup>
 
@@ -125,7 +125,8 @@ export default function page() {
 
           <p className={`${styles.approachSummary} my-5 text-center`}>
             ETHER EDGE MEDIA&apos;s strategic and targeted approach led to significant success for BYTE ON BLAST, firmly positioning the brand for sustained growth and prominence within the cryptocurrency industry.
-          </p>
+          </p> */}
+
         </section>
 
         <section className={`${styles.countWrapper} `}>
@@ -136,13 +137,13 @@ export default function page() {
           >
             <article className={`${styles.countCard}  w-full md:w-[48%]`}>
               <div>
-                <h4 className='gradient-text'>13K</h4>
+                <h4 className='gradient-text'>1.5K</h4>
                 <p>Community Growth</p>
               </div>
             </article>
             <article className={`${styles.countCard}  w-full md:w-[48%] mt-10`}>
               <div>
-                <h4 className='gradient-text'>$1.4M</h4>
+                <h4 className='gradient-text'>$700k</h4>
                 <p>in tracked on chain wealth tracked entering our community</p>
               </div>
             </article>
@@ -150,26 +151,32 @@ export default function page() {
         </section>
 
         <section className='my-[100px] '>
-          <h2>Result</h2>
+          <h2>Stats & Results</h2>
           <section className='flex flex-wrap items-center justify-between gap-5'>
             <article className='w-full lg:w-7/12'>
-              <p className='mt-10'>
-                Our collaborative efforts with Web3 Innovations Ltd yielded
-                remarkable results, underscoring the success of our approach in
-                driving community growth and tracking actual purchasing power.
-                Our incentivized word-of-mouth campaign engaged 80,000
-                participants, infusing new energy into the Saruya community.
-                Leveraging our partnership with Twitter, we achieved substantial
-                Twitter growth of 13,000 new followers, expanding Saruya&apos;s
-                social media presence and reach. Additionally, our mechanism for
-                capturing wallet addresses facilitated the tracking of an
-                impressive $1.4 million in on-chain wealth entering the
-                community, offering valuable insights into the purchasing power
-                of new members and enhancing Saruya&apos;s ecosystem growth.
-                These results reflect the effectiveness of our comprehensive
-                strategy and reinforce Saruya&apos;s position as a thriving web3
-                ecosystem.
-              </p>
+              <div className='mt-10'>
+                <p> The comprehensive marketing plan delivered outstanding outcomes:</p>
+                <br />
+                <p><span className="font-semibold">Community Growth: </span>
+                  BYTE ON BLAST&apos;s Telegram community grew from 10 members to over 1,500 active and engaged participants, contributing to a vibrant online ecosystem.
+                </p>
+                <br />
+                <p><span className="font-semibold">Fundraising Success: </span>
+                  The pre-launch marketing campaign generated over 200 ETH, valued at over $700k USD, within a span of just two hours, demonstrating the campaign&apos;s effectiveness in driving investor interest.
+                </p>
+                <br />
+                <p><span className="font-semibold">Cult-Like Following: </span>
+                  The strategic approach fostered a strong sense of loyalty and enthusiasm within the community, establishing a dedicated following around BYTE ON BLAST.
+                </p>
+                <br />
+                <p><span className="font-semibold">Expanded Audience Reach: </span>
+                  The marketing efforts successfully tapped into the Chinese audience and other key demographics on Crypto Twitter, broadening BYTE ON BLAST&apos;s reach and influence.
+                </p>
+                <br />
+                <p>
+                  ETHER EDGE MEDIA&apos;s strategic and targeted approach led to significant success for BYTE ON BLAST, firmly positioning the brand for sustained growth and prominence within the cryptocurrency industry.
+                </p>
+              </div>
             </article>
 
             <article className='flex items-center flex flex-wrap justify-center  gap-4'>
@@ -182,7 +189,7 @@ export default function page() {
                 </div>
                 <div className={`${styles.countCircle} text-center`}>
                   <div>
-                    <h4>13K</h4>
+                    <h4>1.5K</h4>
                     <p>Twitter Growth</p>
                   </div>
                 </div>
@@ -192,9 +199,9 @@ export default function page() {
                 <div className={`${styles.countCircle} text-center`}>
                   <div>
                     <p>
-                      in tracked on chain wealth tracked entering the community
+                      in tracked on chain wealth <br /> tracked entering the community
                     </p>
-                    <h4>$1.4M</h4>
+                    <h4>$700k</h4>
                   </div>
                 </div>
               </section>
