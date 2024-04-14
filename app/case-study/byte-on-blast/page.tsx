@@ -54,13 +54,15 @@ export default function page() {
           </article>
         </section>
 
+
+        {/* Our Approach */}
         <section
           data-aos='fade-right'
           data-aos-delay='300'
-          className='my-[100px] text-center'
+          className='my-[100px]'
         >
-          <hgroup className='flex flex-col  '>
-            <h5 className='gradient-text'>EtherEdge&apos;s Approach</h5>
+          <hgroup className='flex flex-col'>
+            <h5 className='gradient-text text-center'>EtherEdge&apos;s Approach</h5>
 
             {/* <h4 className='my-5'>Community Managers Expertise</h4> */}
           </hgroup>
@@ -80,7 +82,7 @@ export default function page() {
             Designing visually appealing and professional graphics to enhance the brand&apos;s online presence across various platforms.
           </p>
 
-          <h4 className='my-4'>Community Management:</h4>
+          <h4 className='my-4'>Community Management</h4>
           <p className='my-3'>
             Establishing and nurturing an engaged and positive community through strategic interactions and consistent communication.
           </p>
@@ -90,6 +92,40 @@ export default function page() {
             Implementing targeted strategies to rapidly expand the Telegram community and other social channels, ensuring sustained engagement and active participation.
           </p>
 
+          {/* Stats & Results */}
+
+          <hgroup className={`${styles.stats} flex flex-col`}>
+            <h5 className='gradient-text text-center'>Stats & Results</h5>
+          </hgroup>
+
+          <p className='my-3'>
+            The comprehensive marketing plan delivered outstanding outcomes:
+          </p>
+
+          <h4 className='my-4'>Community Growth</h4>
+          <p className='my-3'>
+            BYTE ON BLAST&apos;s Telegram community grew from 10 members to over 1,500 active and engaged participants, contributing to a vibrant online ecosystem.
+
+          </p>
+
+          <h4 className='my-4'>Fundraising Success</h4>
+          <p className='my-3'>
+            The pre-launch marketing campaign generated over 200 ETH, valued at over $700k USD, within a span of just two hours, demonstrating the campaign&apos;s effectiveness in driving investor interest.
+          </p>
+
+          <h4 className='my-4'>Cult-Like Following</h4>
+          <p className='my-3'>
+            The strategic approach fostered a strong sense of loyalty and enthusiasm within the community, establishing a dedicated following around BYTE ON BLAST.
+          </p>
+
+          <h4 className='my-4'>Expanded Audience Reach</h4>
+          <p className='my-3'>
+            The marketing efforts successfully tapped into the Chinese audience and other key demographics on Crypto Twitter, broadening BYTE ON BLAST&apos;s reach and influence.
+          </p>
+
+          <p className={`${styles.approachSummary} my-5 text-center`}>
+            ETHER EDGE MEDIA&apos;s strategic and targeted approach led to significant success for BYTE ON BLAST, firmly positioning the brand for sustained growth and prominence within the cryptocurrency industry.
+          </p>
         </section>
 
         <section className={`${styles.countWrapper} `}>
