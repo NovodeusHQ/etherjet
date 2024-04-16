@@ -14,7 +14,7 @@ const WhatPeople = () => {
   const toggleDropdown = () => {
     setOpenedDropdown(!openedDropdown);
     router.push("#what-people-are-saying");
-  }
+  };
 
   const RevData: IReview[] = [
     {
