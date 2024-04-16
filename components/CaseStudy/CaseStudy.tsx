@@ -42,8 +42,14 @@ const CaseStudy = ({ title }: { title: string }) => {
     //   imageUrl: images.caseStudy6,
     // },
     {
+      id: 1,
+      title: 'OAT Network',
+      url: '#case-study',
+      imageUrl: images.OATNetWork,
+    },
+    {
       id: 7,
-      title: 'Byte',
+      title: 'Byte on Blast',
       url: '/case-study/byte-on-blast',
       imageUrl: images.caseStudy7,
     },
