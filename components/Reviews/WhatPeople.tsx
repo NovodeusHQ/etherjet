@@ -2,10 +2,20 @@
 
 import { IReview } from '@/Types/types';
 import { images } from '@/exports/images';
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import ReviewCard from './ReviewCard';
 
 const WhatPeople = () => {
+  const router = useRouter();
+
+  const [openedDropdown, setOpenedDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setOpenedDropdown(!openedDropdown);
+    router.push("#what-people-are-saying");
+  }
+
   const RevData: IReview[] = [
     {
       id: 1,
@@ -57,23 +67,29 @@ const WhatPeople = () => {
   ];
 
   return (
-    <section className='container typeOfPeople'>
-      <h2 className='text-center my-5'>What People are Saying</h2>
+    <section className={`container ${openedDropdown ? 'typeOfPeople' : 'closedTypeOfPeople'}`}>
+      <h2 className='text-center my-5'
+      id="what-people-are-saying"
+      >What People are Saying</h2>
       <article className='flex flex-wrap justify-between gap-4'>
         {RevData.map(({ id, stars, title, quote, name, role, imageUrl }) => (
           <div key={id} className='w-full md:w-[47%]'>
             <ReviewCard
+              id={id}
               stars={stars}
               title={title}
               quote={quote}
               name={name}
               role={role}
               imageUrl={imageUrl}
+              openedDropdown={openedDropdown}
             />
           </div>
         ))}
       </article>
-      <div className='flex justify-center'>
+      <div className='flex justify-center mt-5'
+      onClick={toggleDropdown}
+      >
         <svg
           width='244'
           height='63'

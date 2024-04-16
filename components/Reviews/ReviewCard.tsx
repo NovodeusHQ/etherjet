@@ -4,24 +4,28 @@ import styles from './Review.module.scss';
 import RevStars from '../SVGs/RevStars';
 
 export interface IReview {
+  id: number | string | undefined;
   title: string;
   quote: string;
   imageUrl: string | StaticImageData;
   name: string;
   role: string;
   stars: boolean;
+  openedDropdown: boolean;
 }
 
 const ReviewCard: React.FC<IReview> = ({
+  id,
   title,
   quote,
   name,
   role,
   imageUrl,
   stars,
+  openedDropdown
 }) => {
   return (
-    <section className={styles.reviewCard}>
+    <section className={`${styles.reviewCard} ${openedDropdown || Number(id) < 3 ? '' : styles.hideCard}`}>
       <h4>{title}</h4>
       <p className='my-6'>{quote} </p>
 
