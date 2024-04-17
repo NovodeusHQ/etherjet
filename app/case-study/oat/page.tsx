@@ -32,12 +32,12 @@ export default function page() {
             <div>
               <span className="font-semibold">Links: </span>
               &nbsp;
-              <a href="https://twitter.com/OatLayer2" target='_blank'><i className="pi pi-twitter"></i>&nbsp;Twitter</a> &nbsp; |
-              &nbsp; <a href="https://t.me/OatPortal" target='_blank'><i className="pi pi-telegram"></i>&nbsp;Telegram&nbsp;</a> &nbsp; |
-              &nbsp; <a href="https://www.oatchain.io/" target='_blank'><i className="pi pi-globe"></i>&nbsp;Website</a>  &nbsp;|
-              &nbsp; <a href="https://www.oatchain.io/whitepaper.pdf" target='_blank'><i className="pi pi-book"></i>&nbsp;Whitepaper</a> &nbsp; |
-              &nbsp; <a href="#"><i className="pi pi-file-check"></i>&nbsp;Audit</a> &nbsp; |
-              &nbsp; <a href="#"><i className="pi pi-github"></i>&nbsp;Github</a>
+              <a href="https://twitter.com/OatLayer2" target='_blank'><i className="pi pi-twitter"></i>&nbsp;&nbsp;Twitter</a> &nbsp; |
+              &nbsp; <a href="https://t.me/OatPortal" target='_blank'><i className="pi pi-telegram"></i>&nbsp;&nbsp;Telegram&nbsp;</a> &nbsp; |
+              &nbsp; <a href="https://www.oatchain.io/" target='_blank'><i className="pi pi-globe"></i>&nbsp;&nbsp;Website</a>  &nbsp;|
+              &nbsp; <a href="https://www.oatchain.io/whitepaper.pdf" target='_blank'><i className="pi pi-book"></i>&nbsp;&nbsp;Whitepaper</a> &nbsp; |
+              &nbsp; <a href="#"><i className="pi pi-file-check"></i>&nbsp;&nbsp;Audit</a> &nbsp; |
+              &nbsp; <a href="#"><i className="pi pi-github"></i>&nbsp;&nbsp;Github</a>
 
             </div>
           </article>
