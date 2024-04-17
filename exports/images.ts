@@ -9,7 +9,7 @@ import caseStudy7 from '@/public/assets/caseStudy7.png';
 import caseStudy8 from '@/public/assets/caseStudy8.png';
 import caseStudy9 from '@/public/assets/caseStudy9.png';
 import caseStudy10 from '@/public/assets/caseStudy10.png';
-import OATNetWork from '@/public/assets/OATNetWork.png';
+import OATNetWork from '@/public/assets/OATNetwork.png';
 import alice from '@/public/assets/alice.png';
 import blog1 from '@/public/assets/blog1.png';
 import blog2 from '@/public/assets/blog2.png';
