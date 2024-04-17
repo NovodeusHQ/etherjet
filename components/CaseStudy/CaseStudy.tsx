@@ -44,7 +44,7 @@ const CaseStudy = ({ title }: { title: string }) => {
     {
       id: 1,
       title: 'OAT Network',
-      url: '#case-study',
+      url: '/case-study/oat',
       imageUrl: images.OATNetWork,
     },
     {
