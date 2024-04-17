@@ -29,7 +29,7 @@ export default function page() {
               <span className="font-semibold">Contract Address (ETH Mainnet): </span>0x781fbc4c6Edf7a37DCc08a3B323F122e8a09Eac5
             </p>
             <br />
-            <div>
+            <p>
               <span className="font-semibold">Links: </span>
               &nbsp;
               <a href="https://twitter.com/OatLayer2" target='_blank'><i className="pi pi-twitter"></i>&nbsp;&nbsp;Twitter</a> &nbsp; |
@@ -39,7 +39,7 @@ export default function page() {
               &nbsp; <a href="#"><i className="pi pi-file-check"></i>&nbsp;&nbsp;Audit</a> &nbsp; |
               &nbsp; <a href="#"><i className="pi pi-github"></i>&nbsp;&nbsp;Github</a>
 
-            </div>
+            </p>
           </article>
 
           <figure
