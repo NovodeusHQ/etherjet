@@ -13,7 +13,8 @@ export default function Home() {
       <HeroSection />
       <Unravel />
       <WhatWeOffer />
-      <CaseStudy title='Case Studies' />
+      {/* <CaseStudy title='Case Studies' /> */}
+      <div className='case-study-filler'></div>
       <WhatPeople />
       <Explore />
       <ToastContainer />

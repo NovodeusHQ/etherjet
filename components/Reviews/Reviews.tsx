@@ -99,7 +99,7 @@ const Reviews = () => {
         modules={[Autoplay, Pagination]}
         className='mySwiper py-10 '
       >
-        <section className=''>
+        <section className='slide-container'>
           {RevData.map(({ id, stars, title, quote, name, role, imageUrl }) => (
             <SwiperSlide key={id}>
               <ReviewCard
