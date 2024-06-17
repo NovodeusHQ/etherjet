@@ -38,6 +38,16 @@ import LicenseImage from '@/public/assets/LicenseCardImage.png';
 import c1 from '@/public/assets/c1.png';
 import c2 from '@/public/assets/c2.png';
 import mainImage from '@/public/assets/mainImage.png';
+import Aisha from '@/public/assets/Aisha-Khan.jpg';
+import Ananya from '@/public/assets/Ananya-Patel.jpg';
+import Carlos from '@/public/assets/Carlos-Remirez.jpg';
+import Fatima from '@/public/assets/Fatima-Al-Sayed.jpg';
+import JohnSmith from '@/public/assets/John-Smith.jpg';
+import Lars from '@/public/assets/Lars-Johansson.jpg'
+import Li from '@/public/assets/Li-Wei.jpg';
+import Olivia from '@/public/assets/Olivia-Martins.jpg';
+import Sergey from '@/public/assets/Sergey-Ivanov.jpg';
+import Yuki from '@/public/assets/Yuki-tanaka.jpg';
 
 import elephantCard from '@/public/assets/elephantCard.png';
 
@@ -85,4 +95,14 @@ export const images = {
   caseStudy10,
   OATNetWork,
   alice,
+  Aisha,
+  Ananya,
+  Carlos,
+  Fatima,
+  JohnSmith,
+  Lars,
+  Li,
+  Olivia,
+  Sergey,
+  Yuki,
 };

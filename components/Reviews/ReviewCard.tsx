@@ -37,7 +37,7 @@ const ReviewCard: React.FC<IReview> = ({
       <div className='flex gap-2 items-center'>
         {imageUrl !== '' && (
           <figure className='w-[34px] h-[32px]'>
-            <Image src={imageUrl} alt='' />
+            <Image src={imageUrl} className='rounded-full' alt='' />
           </figure>
         )}
         <div>

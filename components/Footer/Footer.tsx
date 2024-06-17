@@ -43,12 +43,12 @@ const Footer = () => {
             <li>
               <Link href='/contact-us'>Contact</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/team'>Company</Link>
             </li>
             <li>
               <Link href='/blog'>Blog</Link>
-            </li>
+            </li> */}
           </ul>
         </main>
 
