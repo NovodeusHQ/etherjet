@@ -3,6 +3,7 @@ import { images } from '@/exports/images';
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import T from '@/public/assets/icons/TelegramIcon.svg';
 
 const HeroSection = () => {
   return (
@@ -20,11 +21,14 @@ const HeroSection = () => {
           project to new heights.
         </p>
 
-        <div className='mt-8'>
+        <div className='mt-8 flex'>
           <Link href='#explore'>
             <button className='main-btn btn' type='button'>
-              GET YOUR PROPOSAL{' '}
+              BOOK  CALL{' '}
             </button>
+          </Link>
+          <Link href='https://t.me/EtherEdgeMediaServices' className='ml-6'>
+            <Image src={T} alt='' className='w-[60px] h-[60px] '  />
           </Link>
         </div>
       </article>

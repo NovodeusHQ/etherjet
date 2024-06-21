@@ -4,30 +4,42 @@ export const WhatWeOffer = () => {
   const offerData = [
     {
       id: 1,
+      title: 'Marketing',
+      subTitle:
+        'From getting the word out via X (Twitter) Ads to high-authority sites, Telegram groups, and buy bots, to DexScreener/DexTools trending, Reddit/Twitter Trending and real-life billboards AND MORE, Ether Edge has you covered.',
+    },
+    {
+      id: 2,
+      title: 'Listing',
+      subTitle:
+        'We offer CoinMarketCap and CoinGecko express listings, JUP strict list services, and every listing service you might need.',
+    },
+    {
+      id: 3,
       title: 'KOL Recruitment & Management',
       subTitle:
         'Tap into the influence of Key Opinion Leaders (KOLs) with our strategic recruitment and effective management solutions.',
     },
     {
-      id: 2,
+      id: 4,
       title: 'Community Managers',
       subTitle:
         'Forge strong connections with your community through our tailored community management strategies.',
     },
     {
-      id: 3,
+      id: 5,
       title: 'Market Makers',
       subTitle:
         'Navigate the blockchain space confidently with our market-making expertise, ensuring liquidity and market stability.',
     },
     {
-      id: 4,
+      id: 6,
       title: 'Advisory',
       subTitle:
         'Receive expert guidance and insights to make informed decisions for your Web3 project',
     },
     {
-      id: 5,
+      id: 7,
       title: 'Graphics Designers',
       subTitle:
         'Transform your ideas into captivating visuals with our creative graphic design team.',

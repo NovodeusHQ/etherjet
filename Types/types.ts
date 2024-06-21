@@ -14,7 +14,7 @@ export interface IReview {
   quote: string;
   imageUrl: string | StaticImageData;
   name: string;
-  role: string;
+  // role: string;
   stars: boolean;
 }
 

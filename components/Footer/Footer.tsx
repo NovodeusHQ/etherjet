@@ -55,8 +55,8 @@ const Footer = () => {
         <hr className=' mb-4 mt-5' />
         <section className={`container flex justify-between`}>
           <div className='flex items-center gap-3 '>
-            <Image src={X} alt='' className='w-[24px] h-[24px]' />
-            <Image src={T} alt='' className='w-[24px] h-[24px] ' />
+            <Image src={X} alt='' className='w-[24px] h-[24px] cursor-pointer'/>
+            <Image src={T} alt='' className='w-[24px] h-[24px] '  />
           </div>
           <div className=''>
             <p>EtherEdge</p>

@@ -9,7 +9,7 @@ export interface IReview {
   quote: string;
   imageUrl: string | StaticImageData;
   name: string;
-  role: string;
+  // role: string;
   stars: boolean;
   openedDropdown: boolean;
 }
@@ -19,7 +19,7 @@ const ReviewCard: React.FC<IReview> = ({
   title,
   quote,
   name,
-  role,
+  // role,
   imageUrl,
   stars,
   openedDropdown
@@ -42,7 +42,7 @@ const ReviewCard: React.FC<IReview> = ({
         )}
         <div>
           <p>{name} </p>
-          <p>{role} </p>
+          {/* <p>{role} </p> */}
         </div>
       </div>
     </section>

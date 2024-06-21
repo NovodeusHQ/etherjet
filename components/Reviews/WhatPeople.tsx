@@ -23,8 +23,8 @@ const WhatPeople = () => {
       quote:
         "“I was blown away by their graphics design – it’s like they read my mind! The KOL management also brought some serious influencers on board. They really know their stuff.” ",
       imageUrl: images.Li,
-      name: 'Abel,',
-      role: 'Marketing Director at TokenCraft',
+      name: 'Abel',
+      // role: 'Marketing Director at TokenCraft',
       stars: true,
     },
     {
@@ -33,8 +33,8 @@ const WhatPeople = () => {
       quote:
         "“If you’re launching an ICO, their advisory services are a must. Their insights made everything smoother, and the support was just incredible. Truly a professional team.”",
       imageUrl: images.JohnSmith,
-      name: 'Justin Khan,',
-      role: 'CEO at CryptoLaunch Advisors',
+      name: 'Justin Khan',
+      // role: 'CEO at CryptoLaunch Advisors',
       stars: true,
     },
     {
@@ -42,8 +42,8 @@ const WhatPeople = () => {
       title: 'Perfect Brand Capture and Social Media Boost',
       quote: "“I can’t say enough good things about their graphics design. They captured our brand perfectly. Plus, the KOL management boosted our social media presence massively.”",
       imageUrl: images.Yuki,
-      name: 'Yuki Tanaka,',
-      role: 'Brand Manager at Sakura Tech Solutions',
+      name: 'Yuki Tanaka',
+      // role: 'Brand Manager at Sakura Tech Solutions',
       stars: true,
     },
     {
@@ -51,8 +51,8 @@ const WhatPeople = () => {
       title: 'Amazing Graphics and KOL Management',
       quote: "“Their team is simply amazing. The graphics design was spot on, and their KOL management brought us the right voices. Our project looks and feels fantastic now!”",
       imageUrl: images.Olivia,
-      name: 'Olivia Martins,',
-      role: 'Product Manager at NovaTech Enterprises',
+      name: 'Olivia Martins',
+      // role: 'Product Manager at NovaTech Enterprises',
       stars: true,
     },
     {
@@ -60,8 +60,8 @@ const WhatPeople = () => {
       title: 'Boosting Liquidity and Visibility',
       quote: "“Their team is simply amazing. The graphics design was spot on, and their KOL management brought us the right voices. Our project looks and feels fantastic now!”",
       imageUrl: images.Carlos,
-      name: 'Elijah carter,',
-      role: 'Head of Trading at LatAm Exchange',
+      name: 'Elijah carter',
+      // role: 'Head of Trading at LatAm Exchange',
       stars: true,
     },
     {
@@ -69,8 +69,8 @@ const WhatPeople = () => {
       title: 'Strategic and Practical Advisory Services',
       quote: "“Their advisory services are like a breath of fresh air. They offered us strategic advice and practical tips that really made a difference. You can’t go wrong with them.”",
       imageUrl: images.Sergey,
-      name: 'Sergey Ivanov,',
-      role: 'Strategic Consultant at EastWind Strategies ',
+      name: 'Sergey Ivanov',
+      // role: 'Strategic Consultant at EastWind Strategies ',
       stars: true,
     },
     {
@@ -78,8 +78,8 @@ const WhatPeople = () => {
       title: 'Stunning Graphics and Effective Market-Making',
       quote: "“From day one, I knew we were in good hands. Their graphics are stunning, and the market-making strategies they provided were spot on. Our project’s visibility skyrocketed!”",
       imageUrl: images.Fatima,
-      name: 'Fatima Al-Sayed,',
-      role: 'Project Manager at Oasis Ventures ',
+      name: 'Fatima Al-Sayed',
+      // role: 'Project Manager at Oasis Ventures ',
       stars: true,
     },
     {
@@ -87,8 +87,8 @@ const WhatPeople = () => {
       title: 'Next-Level KOL Management and Advisory',
       quote: "“What a team! Their KOL management is on another level. They connected us with influencers who genuinely support our cause. Plus, their advisory services were spot on.”",
       imageUrl: images.Lars,
-      name: 'Lars Johansson,',
-      role: 'Marketing Consultant at Nordic Growth Partners ',
+      name: 'Lars Johansson',
+      // role: 'Marketing Consultant at Nordic Growth Partners ',
       stars: true,
     },
     {
@@ -96,8 +96,8 @@ const WhatPeople = () => {
       title: 'Outstanding Marketing Strategies and Executionn',
       quote: "“Their marketing strategies are truly exceptional. They helped us reach a broader audience and effectively conveyed our brand message. Their execution was flawless, and the results exceeded our expectations.”",
       imageUrl: images.alice,
-      name: 'Sofia Hernandez,',
-      role: 'Chief Marketing Officer at Global Impact Ventures ',
+      name: 'Sofia Hernandez',
+      // role: 'Chief Marketing Officer at Global Impact Ventures ',
       stars: true,
     },
     {
@@ -105,8 +105,8 @@ const WhatPeople = () => {
       title: 'Next-Level KOL Management and Advisory',
       quote: "“Their market-making service was a game-changer. They improved our liquidity and gave us some valuable market insights. Can’t recommend them enough!.”",
       imageUrl: images.Ananya,
-      name: 'Ananya Patel,',
-      role: 'Financial Analyst at FinEdge Capital',
+      name: 'Ananya Patel',
+      // role: 'Financial Analyst at FinEdge Capital',
       stars: true,
     },
 
@@ -118,7 +118,8 @@ const WhatPeople = () => {
       id="what-people-are-saying"
       >What People are Saying</h2>
       <article className='flex flex-wrap justify-between gap-4'>
-        {RevData.map(({ id, stars, title, quote, name, role, imageUrl }) => (
+        {/* Note the role vairable was taken off from the reviews and therefore not available in the map parenthesis */}
+        {RevData.map(({ id, stars, title, quote, name, imageUrl }) => (
           <div key={id} className='w-full md:w-[47%]'>
             <ReviewCard
               id={id}
@@ -126,7 +127,7 @@ const WhatPeople = () => {
               title={title}
               quote={quote}
               name={name}
-              role={role}
+              // role={role}
               imageUrl={imageUrl}
               openedDropdown={openedDropdown}
             />
