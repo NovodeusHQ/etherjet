@@ -22,7 +22,7 @@ const HeroSection = () => {
         </p>
 
         <div className='mt-8 flex'>
-          <Link href='#explore'>
+          <Link href='contact-us'>
             <button className='main-btn btn' type='button'>
               BOOK  CALL{' '}
             </button>

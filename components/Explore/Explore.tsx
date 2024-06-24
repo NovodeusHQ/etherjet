@@ -13,7 +13,7 @@ const SubmitButton = () => {
   return (
     <button type='submit' className='btn submit-proposal-btn'
     disabled={pending}
-    >Book Call</button>
+    >Submit</button>
   )
 }
 

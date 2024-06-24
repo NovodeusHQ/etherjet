@@ -21,6 +21,8 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "services/sendEmailService.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "services/sendEmailService.js", "next.config.mjs"],
   "exclude": ["node_modules"]
 }
+
+
